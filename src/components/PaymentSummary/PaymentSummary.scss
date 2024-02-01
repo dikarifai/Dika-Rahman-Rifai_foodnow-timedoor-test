@@ -1,0 +1,113 @@
+@import "../../assets//base.scss";
+
+.payment-wrapper,
+.payment-item,
+.modal-content {
+  @each $property, $value in $flex-col {
+    #{$property}: $value;
+  }
+}
+
+.payment-list,
+.payment-total {
+  @each $property, $value in $flex-row {
+    #{$property}: $value;
+  }
+}
+
+.payment-list,
+.payment-total {
+  justify-content: space-between;
+  color: black;
+}
+
+.payment-total {
+  border-top: 2px solid #f2f2f2;
+}
+
+.payment-list__name {
+  color: $secondary-color;
+}
+
+.payment-wrapper {
+  background-color: white;
+  border-radius: $border-rounded;
+  border: $border;
+  gap: 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  min-height: 480px;
+}
+
+.payment-title {
+  flex: 1;
+}
+
+.payment-item {
+  justify-content: space-between;
+  flex: 10;
+}
+
+.payment-order__button {
+  flex: 1;
+  color: white;
+  min-height: 40px;
+  background-color: $primary-color;
+  border: $border;
+  border-radius: $border-rounded;
+  cursor: pointer;
+}
+
+.payment-order__button:hover,
+.modal-button:hover {
+  background-color: #c97a03;
+}
+
+.modal-payment {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: black;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-payment__deactived {
+  display: none;
+}
+.modal-content {
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: $border-rounded;
+  padding: 24px;
+  gap: 8px;
+}
+
+.modal-button {
+  color: white;
+  min-height: 40px;
+  min-width: 80%;
+  background-color: $primary-color;
+  border: $border;
+  border-radius: $border-rounded;
+  cursor: pointer;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-logo {
+  flex: 1;
+  height: 100px;
+  text-align: center;
+}
+.modal-title {
+  flex: 1;
+}
+.modal-desc {
+  flex: 1;
+}

@@ -1,0 +1,80 @@
+@import "../../assets/base.scss";
+
+.navbar-wrapper {
+  position: relative;
+  background-image: url("@/assets/img/hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: start;
+  padding: 12px 0;
+  box-sizing: border-box;
+  height: 560px;
+}
+
+.logo-foodnow {
+  width: 200px;
+}
+.logo-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+}
+.router-wrapper {
+  flex: 2.5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+}
+
+.router-wrapper a {
+  color: white;
+}
+
+.auth-button-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.auth-button-wrapper .active {
+  color: white;
+  background-color: $primary-color;
+  cursor: pointer;
+}
+.auth-button-wrapper a {
+  cursor: pointer;
+}
+
+.nav-auth {
+  padding: 5px 30px;
+  border-radius: 20px;
+  color: white;
+}
+
+.title {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 96px;
+  color: $primary-color;
+}
+
+@media only screen and (max-width: 1260px) {
+  .navbar-wrapper {
+    @each $property, $value in $flex-col {
+      #{$property}: $value;
+    }
+    padding: 4px;
+  }
+  .auth-button-wrapper a {
+    max-height: 40px;
+  }
+}

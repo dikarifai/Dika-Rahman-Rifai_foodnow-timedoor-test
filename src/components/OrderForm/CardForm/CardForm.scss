@@ -1,0 +1,79 @@
+@import "../../../assets/base.scss";
+
+.card-wrapper,
+.card-price-wrapper,
+.card-wrapper__active {
+  @each $property, $value in $flex-row {
+    #{$property}: $value;
+  }
+}
+
+.card-wrapper,
+.card-wrapper__active {
+  border-radius: $border-rounded;
+  padding: 20px;
+  flex: 1;
+  align-items: center;
+  justify-content: end;
+  border: $border;
+  position: relative;
+  cursor: pointer;
+}
+.card-wrapper__active {
+  background-color: $primary-color;
+  .card-img {
+    transform: rotate(30deg);
+    .card-wrapper:hover {
+      background-color: $primary-color;
+    }
+  }
+}
+
+.card-wrapper:hover {
+  .card-img {
+    transform: rotate(30deg);
+  }
+  background-color: $primary-light-color;
+  .card-img {
+    transform: rotate(30deg);
+  }
+}
+
+.card-img {
+  transition: transform 0.3s;
+  cursor: pointer;
+  height: 114px;
+}
+
+.card-img-wrapper {
+  flex: 1;
+}
+
+.offer-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.card-description {
+  flex: 4;
+}
+
+.card-price,
+.card-discount {
+  color: black;
+}
+
+.card-price__discount {
+  text-decoration: line-through;
+  color: $secondary-color;
+}
+
+.card-name {
+  color: black;
+  font-weight: 600;
+}
+
+.card-price-wrapper {
+  gap: 12px;
+}

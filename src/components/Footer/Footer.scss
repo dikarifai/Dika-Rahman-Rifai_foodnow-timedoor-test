@@ -1,0 +1,112 @@
+@import "../../assets/base.scss";
+.footer-wrapper,
+.logo-wrapper,
+.footer-location-icon-wrapper {
+  @each $property, $value in $flex-row {
+    #{$property}: $value;
+  }
+}
+
+.footer-wrapper {
+  @each $property, $value in $flex-col {
+    #{$property}: $value;
+  }
+}
+
+.footer-wrapper {
+  gap: 16px;
+  padding: 4px;
+}
+
+.footer-sosmed {
+  flex: 1;
+}
+.footer-sosmed h3 {
+  color: $primary-color;
+}
+.footer-nav {
+  flex: 1;
+}
+.footer-wrapper h3 {
+  flex: 1;
+  color: $primary-color;
+}
+.footer-nav h4 {
+  color: black;
+}
+.footer-nav h4:hover {
+  color: $primary-color;
+}
+.footer-nav-item {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-right: 72px;
+}
+.footer-contact {
+  gap: 12px;
+  flex: 1;
+  color: black;
+}
+.footer-location {
+  flex: 1;
+}
+
+.logo-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  height: 58px;
+  border: 2px solid $primary-color;
+  border-radius: 50%;
+}
+
+.footer-contact div {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.footer-location p {
+  padding: 0 24px;
+}
+
+.footer-location-icon-wrapper h4 {
+  color: black;
+  font-weight: bold;
+}
+.footer-location p {
+  color: black;
+}
+
+.footer-copyright {
+  text-align: center;
+  color: black;
+}
+
+.footer-wrapper {
+  width: 100%;
+  padding: 36px 4px;
+  border-top: $border;
+  border-bottom: $border;
+  //   margin: 100px;
+}
+
+@media only screen and (min-width: 1280px) {
+  .container {
+    width: 100%;
+    padding: 100px 100px 0;
+  }
+
+  .footer-wrapper {
+    @each $property, $value in $flex-row {
+      #{$property}: $value;
+    }
+  }
+
+  .footer-contact {
+    @each $property, $value in $flex-col {
+      #{$property}: $value;
+    }
+  }
+}

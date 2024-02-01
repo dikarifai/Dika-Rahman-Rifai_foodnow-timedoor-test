@@ -1,0 +1,72 @@
+@import "../../assets/base.scss";
+
+.custome-size__option {
+  @each $property, $value in $flex-row {
+    #{$property}: $value;
+  }
+}
+.custome-size__option {
+  color: black;
+  gap: 12px;
+}
+
+.custom-input__price {
+  color: $secondary-color;
+}
+
+.custom-radio-label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.custom-radio-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border: 2px solid $secondary-color;
+  border-radius: 50%;
+}
+
+.custom-radio-label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.custom-radio-label input:checked ~ .checkmark {
+  border: 2px solid $primary-color;
+  // padding: 12px;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-radio-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.custom-radio-label .checkmark:after {
+  top: 3.5px;
+  left: 3.5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: $primary-color;
+}

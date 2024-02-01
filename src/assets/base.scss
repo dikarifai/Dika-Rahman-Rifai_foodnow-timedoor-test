@@ -1,0 +1,21 @@
+$primary-color: #ff9900;
+$primary-dark-color: #ab6600;
+$primary-light-color: #ffd699;
+$secondary-color: #8c8c8c;
+$secondary-light-color: #e6e6e6;
+$accent-color: #e74c3c;
+
+$flex-col: (
+  display: flex,
+  flex-direction: column,
+);
+$flex-row: (
+  display: flex,
+  flex-direction: row,
+);
+
+$border: 1px solid #f2f2f2;
+
+$border-rounded: 20px;
+
+$text-color: black;

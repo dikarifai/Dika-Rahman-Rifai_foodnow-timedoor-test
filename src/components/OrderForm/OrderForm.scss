@@ -1,0 +1,56 @@
+@import "../../assets/base.scss";
+
+.container,
+.form-order-wrapper {
+  @each $property, $value in $flex-row {
+    #{$property}: $value;
+  }
+}
+
+.content-wrapper,
+.form-wrapper {
+  @each $property, $value in $flex-col {
+    #{$property}: $value;
+  }
+}
+
+.container {
+  padding: 110px 110px 24px;
+  gap: 24px;
+}
+
+.content-wrapper {
+  flex: 3;
+  gap: 24px;
+}
+
+.form-wrapper {
+  flex: 3;
+  gap: 24px;
+}
+
+.form-order-wrapper {
+  align-items: center;
+  gap: 16px;
+}
+
+.payment-wrapper {
+  flex: 1;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1260px) {
+  .form-order-wrapper,
+  .container {
+    @each $property, $value in $flex-col {
+      #{$property}: $value;
+    }
+  }
+
+  .form-order-wrapper {
+    align-items: unset;
+  }
+  .container {
+    padding: 4px;
+  }
+}
